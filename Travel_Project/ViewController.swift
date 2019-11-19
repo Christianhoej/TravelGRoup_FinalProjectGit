@@ -13,6 +13,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var selectCountry: UIButton!
     @IBOutlet weak var testLabel: UILabel!
     @IBOutlet weak var countryName: UITextField!
+    @IBOutlet weak var Country: UILabel!
+    @IBOutlet weak var Capital: UILabel!
+    @IBOutlet weak var population: UILabel!
     
     
     override func viewDidLoad() {
@@ -25,10 +28,13 @@ class ViewController: UIViewController {
         //rewrytwertrwetrew
     }
     
+    let countryData = Countrydata()
    
     let datasession = Countrydata();
-    @IBAction func selectCountry(_ sender: Any) {
-        datasession.getCountry(name: countryName.text!)
+    @IBAction func selectCountry(sender: UIButton!) {
+        let country = countryName.text
+        self.datasession.getCountry(name: country!)
+        
     }
     
     //MARK: Example Data Protocol

@@ -24,8 +24,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Enter Country"/>
                                 <connections>
-                                    <action selector="selectCountry:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aco-JY-KNe"/>
-                                    <segue destination="JH6-hs-bA8" kind="show" id="WYa-1c-2mL"/>
+                                    <action selector="selectCountryWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Ms-ZJ-xf7"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Country" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PrB-81-EXh">
@@ -33,10 +32,28 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="enterCountryTextField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="7kb-aU-jVe"/>
-                                </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqs-PA-G1a">
+                                <rect key="frame" x="186" y="629" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v3S-xg-gqU">
+                                <rect key="frame" x="186" y="696" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPx-WF-OTf">
+                                <rect key="frame" x="186" y="559" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -54,7 +71,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="Capital" destination="jqs-PA-G1a" id="9az-U2-YOC"/>
+                        <outlet property="Country" destination="hPx-WF-OTf" id="Hak-Ba-mb2"/>
                         <outlet property="countryName" destination="PrB-81-EXh" id="PHE-xQ-r02"/>
+                        <outlet property="population" destination="v3S-xg-gqU" id="6sh-il-hu8"/>
                         <outlet property="selectCountry" destination="Ph5-2k-0PV" id="gxw-oW-Ml7"/>
                     </connections>
                 </viewController>
@@ -71,13 +91,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Denmark" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ugk-6F-kll">
-                                <rect key="frame" x="152.5" y="98" width="109.5" height="33.5"/>
+                                <rect key="frame" x="152.5" y="54" width="109.5" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="wAm-FC-Lcc">
-                                <rect key="frame" x="39" y="177.5" width="142" height="479"/>
+                                <rect key="frame" x="39" y="133.5" width="142" height="479"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Population:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3g-Tn-4f5">
                                         <rect key="frame" x="0.0" y="0.0" width="142" height="20.5"/>
@@ -130,7 +150,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="osq-YR-1fl">
-                                <rect key="frame" x="220" y="177.5" width="164.5" height="479"/>
+                                <rect key="frame" x="220" y="133.5" width="164.5" height="479"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5,814,461" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Az-NY-7UC">
                                         <rect key="frame" x="0.0" y="0.0" width="164.5" height="20.5"/>
