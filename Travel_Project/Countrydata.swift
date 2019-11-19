@@ -55,8 +55,12 @@ class Countrydata: NSObject {
                     print(error!)
                 } else {
                     do {
-                        let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary
+                        //let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary
                         
+                        
+                        let jsonResult = try JSONSerialization.jsonObject(with: data!, options: [])
+                        
+                    /*
                         if let dictionary = data as? [String: Any] {
                             print("1")
                             if let number = dictionary["name"] as? String {
@@ -72,25 +76,30 @@ class Countrydata: NSObject {
                                 // access nested dictionary values by key
                             }
                         }
-                        
-                        
+                        */
                         
               
-                        /*if jsonResult != nil {
-                            print("jsonResult")
-                            let name: String? = jsonResult!["name"] as? String
-                            let capital: String? = jsonResult!["capital"] as? String
-                            if name != nil && capital != nil {
-                                self.delegate?.responseDataHandler(data: jsonResult!)
+                        if jsonResult != nil {
+                            //let name = jsonResult["name"] as? [[String: Any]]
+                                
+                                
+                            print(jsonResult)
+                            
+                            //let data : NSDictionary? = jsonResult!["alpha2Code"] as? NSDictionary
+                            print(data)
+                            
+//let capital: String? = jsonResult["capital"] as? String
+                           /* if name != nil && capital != nil {
+                                self.delegate?.responseDataHandler(data: jsonResult as! NSDictionary)
                                 print("WWWWWWWWWWWW")
                             } else {
                                 print("FEEEEEEJL")
                                 self.delegate?.responseError(message: "Fake data not found")
-                            }
+                            }*/
                         }
                         else{
                             print("FFFFFFF")
-                        }*/
+                        }
                         
                         /*guard let data1 = jsonResult as? [NSDictionary] else {
                               return
@@ -102,6 +111,20 @@ class Countrydata: NSObject {
                         print("Raw data:\n\(data!)\n")
                         let dataString = String(data: data!, encoding: String.Encoding.utf8)
                         print("Human-readable data:\n\(dataString!)")
+                        
+                        // fullName: String = "First Last"
+                        let fullNameArr = dataString!.split(separator: ",")
+
+                        var name: String = String(fullNameArr[0])
+                        var capital: String = String(fullNameArr[5])
+                        var population: String = String(fullNameArr[12])
+                        
+                        
+                        //print(firstName.replacingOccurrences(of: "'", with: ""))
+                        print(name)
+                        print(capital)
+                        print(population)
+                    
                     } catch {
                     }
                 }

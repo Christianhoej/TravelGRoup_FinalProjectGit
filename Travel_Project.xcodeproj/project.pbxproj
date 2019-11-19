@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		FE497AA52383525000FDCFC3 /* Countrydata.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE497AA42383525000FDCFC3 /* Countrydata.swift */; };
-		FE497AA723835B7200FDCFC3 /* testData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE497AA623835B7200FDCFC3 /* testData.swift */; };
 		FE77EEFB2379CF82005B9FA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE77EEFA2379CF82005B9FA6 /* AppDelegate.swift */; };
 		FE77EEFD2379CF82005B9FA6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE77EEFC2379CF82005B9FA6 /* SceneDelegate.swift */; };
 		FE77EEFF2379CF82005B9FA6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE77EEFE2379CF82005B9FA6 /* ViewController.swift */; };
@@ -30,7 +29,6 @@
 
 /* Begin PBXFileReference section */
 		FE497AA42383525000FDCFC3 /* Countrydata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countrydata.swift; sourceTree = "<group>"; };
-		FE497AA623835B7200FDCFC3 /* testData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testData.swift; sourceTree = "<group>"; };
 		FE77EEF72379CF82005B9FA6 /* Travel_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travel_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE77EEFA2379CF82005B9FA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE77EEFC2379CF82005B9FA6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,7 +86,6 @@
 				FE77EEFE2379CF82005B9FA6 /* ViewController.swift */,
 				FE77EF002379CF82005B9FA6 /* Main.storyboard */,
 				FE497AA42383525000FDCFC3 /* Countrydata.swift */,
-				FE497AA623835B7200FDCFC3 /* testData.swift */,
 				FE77EF032379CF82005B9FA6 /* Assets.xcassets */,
 				FE77EF052379CF82005B9FA6 /* LaunchScreen.storyboard */,
 				FE77EF082379CF82005B9FA6 /* Info.plist */,
@@ -209,7 +206,6 @@
 				FE77EEFF2379CF82005B9FA6 /* ViewController.swift in Sources */,
 				FE77EEFB2379CF82005B9FA6 /* AppDelegate.swift in Sources */,
 				FE497AA52383525000FDCFC3 /* Countrydata.swift in Sources */,
-				FE497AA723835B7200FDCFC3 /* testData.swift in Sources */,
 				FE77EEFD2379CF82005B9FA6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,21 +20,23 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ph5-2k-0PV">
-                                <rect key="frame" x="155" y="428" width="102" height="30"/>
+                                <rect key="frame" x="160" y="471" width="95" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Select Country"/>
+                                <state key="normal" title="Enter Country"/>
                                 <connections>
                                     <action selector="selectCountry:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aco-JY-KNe"/>
                                     <segue destination="JH6-hs-bA8" kind="show" id="WYa-1c-2mL"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vx3-Fy-lR5">
-                                <rect key="frame" x="254" y="509" width="42" height="21"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Country" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PrB-81-EXh">
+                                <rect key="frame" x="89" y="398" width="237" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="enterCountryTextField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="7kb-aU-jVe"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -52,8 +54,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="countryName" destination="PrB-81-EXh" id="PHE-xQ-r02"/>
                         <outlet property="selectCountry" destination="Ph5-2k-0PV" id="gxw-oW-Ml7"/>
-                        <outlet property="testLabel" destination="vx3-Fy-lR5" id="UBC-Xl-fww"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
