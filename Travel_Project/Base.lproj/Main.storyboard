@@ -25,6 +25,7 @@
                                 <state key="normal" title="Enter Country"/>
                                 <connections>
                                     <action selector="selectCountryWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Ms-ZJ-xf7"/>
+                                    <segue destination="JH6-hs-bA8" kind="show" id="EKn-2H-ezQ"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Country" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PrB-81-EXh">
@@ -34,21 +35,21 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqs-PA-G1a">
-                                <rect key="frame" x="186" y="629" width="42" height="21"/>
+                                <rect key="frame" x="31" y="629" width="339" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v3S-xg-gqU">
-                                <rect key="frame" x="186" y="696" width="42" height="21"/>
+                                <rect key="frame" x="31" y="696" width="339" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPx-WF-OTf">
-                                <rect key="frame" x="186" y="559" width="42" height="21"/>
+                                <rect key="frame" x="31" y="559" width="339" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -85,19 +86,19 @@
         <!--Country-->
         <scene sceneID="84V-sC-jkm">
             <objects>
-                <viewController title="Country" id="JH6-hs-bA8" sceneMemberID="viewController">
+                <viewController title="Country" id="JH6-hs-bA8" customClass="DisplayViewContoller" customModule="Travel_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Iwu-Xq-wxM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Denmark" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ugk-6F-kll">
-                                <rect key="frame" x="152.5" y="54" width="109.5" height="33.5"/>
+                                <rect key="frame" x="152.5" y="98" width="109.5" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="wAm-FC-Lcc">
-                                <rect key="frame" x="39" y="133.5" width="142" height="479"/>
+                                <rect key="frame" x="39" y="177.5" width="142" height="479"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Population:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3g-Tn-4f5">
                                         <rect key="frame" x="0.0" y="0.0" width="142" height="20.5"/>
@@ -150,7 +151,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="osq-YR-1fl">
-                                <rect key="frame" x="220" y="133.5" width="164.5" height="479"/>
+                                <rect key="frame" x="220" y="177.5" width="164.5" height="479"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5,814,461" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Az-NY-7UC">
                                         <rect key="frame" x="0.0" y="0.0" width="164.5" height="20.5"/>
@@ -215,10 +216,21 @@
                         <viewLayoutGuide key="safeArea" id="PDp-Ud-mpK"/>
                     </view>
                     <navigationItem key="navigationItem" id="XG3-PI-5MZ"/>
+                    <connections>
+                        <outlet property="areaLabel" destination="AZj-6R-Z0V" id="YkT-bg-WP5"/>
+                        <outlet property="capitalLabel" destination="3Ru-FR-8fh" id="hgg-fa-wPr"/>
+                        <outlet property="countryNameLabel" destination="Ugk-6F-kll" id="ymP-zI-hch"/>
+                        <outlet property="currencyLabel" destination="gAI-wb-2Hm" id="yjX-Jt-q3x"/>
+                        <outlet property="gdpLabel" destination="wLp-BD-3bT" id="SNV-Zl-fvu"/>
+                        <outlet property="governmentLabel" destination="Wyb-4V-nK7" id="IVu-oT-6hO"/>
+                        <outlet property="languagesLabel" destination="sdp-9o-XHQ" id="qYT-NF-i0w"/>
+                        <outlet property="polulationLabel" destination="8Az-NY-7UC" id="Rhp-rq-ZUb"/>
+                        <outlet property="religionLabel" destination="MpX-gj-hu4" id="din-hK-zQl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rZe-Pz-k4H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1742.0289855072465" y="136.60714285714286"/>
+            <point key="canvasLocation" x="1880" y="138"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="E2Y-Me-3hH">

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CountryDataProtocol {
 
     @IBOutlet weak var selectCountry: UIButton!
     @IBOutlet weak var testLabel: UILabel!
@@ -17,23 +17,24 @@ class ViewController: UIViewController {
     @IBOutlet weak var Capital: UILabel!
     @IBOutlet weak var population: UILabel!
     
+    var dataSession = Countrydata()
+    
+    var populationVal:String = "200"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        //TEST2
         
-        
-        //kalgpiusgh;;
-        //rewrytwertrwetrew
+        self.dataSession.delegate = self
     }
     
-    let countryData = Countrydata()
+    //let countryData = Countrydata()
    
-    let datasession = Countrydata();
+    //let datasession = Countrydata();
+    
+    
     @IBAction func selectCountry(sender: UIButton!) {
         let country = countryName.text
-        self.datasession.getCountry(name: country!)
+        self.dataSession.getCountry(name: country!)
         
     }
     
@@ -41,11 +42,26 @@ class ViewController: UIViewController {
     
     func responseDataHandler(data:NSDictionary) {
         //let title = data["title"] as! String
-        let name = data["name"] as! String
+        if data != nil{
+        print(data)
+            print("@@@@@")
+        }
+        else{
+            print("LOST")
+        }
+        
+        let name = data.value(forKey: "name")
+        let capital = data.value(forKey: "capital")
+        
         
         //Run this handling on a separate thread
         DispatchQueue.main.async() {
-            self.testLabel.text = name
+            self.Capital.text="\(capital!)"
+            self.Country.text="\(name!)"
+            
+            self.populationVal = "\(capital!)"
+            
+            
             //self.bodyTextView.text = body
         }
     }
@@ -57,6 +73,12 @@ class ViewController: UIViewController {
             //self.bodyTextView.text = message
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as? DisplayViewContoller
+        vc?.population = populationVal
+    }
+    
     
 
 }

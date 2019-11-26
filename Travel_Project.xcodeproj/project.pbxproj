@@ -15,6 +15,7 @@
 		FE77EF042379CF82005B9FA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE77EF032379CF82005B9FA6 /* Assets.xcassets */; };
 		FE77EF072379CF82005B9FA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE77EF052379CF82005B9FA6 /* LaunchScreen.storyboard */; };
 		FE77EF122379CF82005B9FA6 /* Travel_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE77EF112379CF82005B9FA6 /* Travel_ProjectTests.swift */; };
+		FEF5B46B238CE33B00D59056 /* DisplayViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF5B46A238CE33B00D59056 /* DisplayViewContoller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		FE77EF0D2379CF82005B9FA6 /* Travel_ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Travel_ProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE77EF112379CF82005B9FA6 /* Travel_ProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel_ProjectTests.swift; sourceTree = "<group>"; };
 		FE77EF132379CF82005B9FA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEF5B46A238CE33B00D59056 /* DisplayViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayViewContoller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				FE77EEFA2379CF82005B9FA6 /* AppDelegate.swift */,
 				FE77EEFC2379CF82005B9FA6 /* SceneDelegate.swift */,
 				FE77EEFE2379CF82005B9FA6 /* ViewController.swift */,
+				FEF5B46A238CE33B00D59056 /* DisplayViewContoller.swift */,
 				FE77EF002379CF82005B9FA6 /* Main.storyboard */,
 				FE497AA42383525000FDCFC3 /* Countrydata.swift */,
 				FE77EF032379CF82005B9FA6 /* Assets.xcassets */,
@@ -207,6 +210,7 @@
 				FE77EEFB2379CF82005B9FA6 /* AppDelegate.swift in Sources */,
 				FE497AA52383525000FDCFC3 /* Countrydata.swift in Sources */,
 				FE77EEFD2379CF82005B9FA6 /* SceneDelegate.swift in Sources */,
+				FEF5B46B238CE33B00D59056 /* DisplayViewContoller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
