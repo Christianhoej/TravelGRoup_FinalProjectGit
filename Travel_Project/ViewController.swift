@@ -37,6 +37,9 @@ class ViewController: UIViewController, CountryDataProtocol  {
    
     //let datasession = Countrydata();
     
+    
+    
+    
   
     @IBAction func selectCountry(sender: UIButton!) {
         if (countryName.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true) {
@@ -47,10 +50,17 @@ class ViewController: UIViewController, CountryDataProtocol  {
         else{
             let country = countryName.text
             self.dataSession.getCountry(name: country!)
+            
+            sender.flash()
+            //sender.pulsate()
             //let vc = DisplayViewContoller()
             //vc.countryName = countryName.text!
         }
     }
+    
+    
+    
+    
     
     //MARK: Example Data Protocol
     
@@ -77,6 +87,7 @@ class ViewController: UIViewController, CountryDataProtocol  {
       //  print(currency)
         let flag = data.value(forKey: "flag")
         
+    
         
         //let url = URL(string: flag)
         //let flagData = try? Data(from: url!)
