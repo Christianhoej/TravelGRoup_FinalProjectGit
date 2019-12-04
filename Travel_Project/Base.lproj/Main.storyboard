@@ -185,12 +185,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042.0289855072465" y="137.94642857142856"/>
+            <point key="canvasLocation" x="1648" y="138"/>
         </scene>
-        <!--Country-->
+        <!--Login-->
         <scene sceneID="84V-sC-jkm">
             <objects>
-                <viewController title="Country" id="JH6-hs-bA8" customClass="DisplayViewContoller" customModule="Travel_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Login" id="JH6-hs-bA8" customClass="LoginViewController" customModule="Travel_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Iwu-Xq-wxM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -234,6 +234,7 @@
                                     <color key="titleColor" red="0.052937485280000002" green="0.42299088839999999" blue="0.48237597939999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
+                                    <action selector="loginPressed:" destination="JH6-hs-bA8" eventType="touchUpInside" id="7lf-Qb-76Q"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="t7V-uZ-fPP"/>
                                 </connections>
                             </button>
@@ -254,11 +255,14 @@
                     <navigationItem key="navigationItem" id="XG3-PI-5MZ"/>
                     <connections>
                         <outlet property="countryNameLabel" destination="Ugk-6F-kll" id="ymP-zI-hch"/>
+                        <outlet property="loginBtn" destination="L0m-kd-KXD" id="NzH-12-Xhi"/>
+                        <outlet property="passwordTextField" destination="2G5-m6-kZC" id="Lug-1v-zta"/>
+                        <outlet property="usernameTextField" destination="ePe-bV-4LY" id="hVt-Hh-qVg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rZe-Pz-k4H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1879.7101449275365" y="137.94642857142856"/>
+            <point key="canvasLocation" x="897" y="-230"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="E2Y-Me-3hH">
@@ -350,6 +354,18 @@
                                 <color key="textColor" red="0.77950686219999998" green="0.71676856280000001" blue="0.7960864902" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W96-cz-4WU">
+                                <rect key="frame" x="132" y="723" width="151" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.74365603920000001" green="0.9020224214" blue="0.89412003760000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Log out">
+                                    <color key="titleColor" red="0.021272117270000002" green="0.39142340419999999" blue="0.45492529869999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectCountryWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nM1-2J-Ou4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.15294456249999999" green="0.0" blue="0.22572676089999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -362,7 +378,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XSM-iR-0m1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042" y="856"/>
+            <point key="canvasLocation" x="1029" y="842"/>
         </scene>
     </scenes>
     <resources>
