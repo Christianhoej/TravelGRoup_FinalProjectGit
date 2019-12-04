@@ -40,7 +40,7 @@ class Countrydata{
     func getCountry(name: String) {
             
         var urlPath = self.urlPathBase
-        var countryName = name.replacingOccurrences(of: " ", with: "+")
+        var countryName = name.replacingOccurrences(of: " ", with: "")
         var temp = "\(countryName)?fullText=true"
             
         urlPath = urlPath + temp
