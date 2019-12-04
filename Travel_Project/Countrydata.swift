@@ -56,35 +56,14 @@ class Countrydata{
                     do {
                         let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSArray
                         
-                        //print(jsonResult)
-                        //let jsonResult = try JSONSerialization.jsonObject(with: data!, options: [])
-                        
-                    /*
-                        if let dictionary = data as? [String: Any] {
-                            print("1")
-                            if let number = dictionary["name"] as? String {
-                                // access individual value in dictionary
-                                print("WHAT")
-                            }
-
-                            for (key, value) in dictionary {
-                                // access all key / value pairs in dictionary
-                            }
-
-                            if let nestedDictionary = dictionary["anotherKey"] as? [String: Any] {
-                                // access nested dictionary values by key
-                            }
-                        }
-                        */
-                        
-              
+         
                         if jsonResult != nil {
                             //let name = jsonResult["name"] as? [[String: Any]]
                                 
                             print("WWWWWWWW")
                             //print(jsonResult)
                             let values: NSDictionary? = jsonResult![0] as? NSDictionary
-                            
+                            //let currencies
                             
                             //print(values)
                             self.delegate?.responseDataHandler(data: values!)
