@@ -63,8 +63,15 @@ class Countrydata{
                             print("WWWWWWWW")
                             //print(jsonResult)
                             let values: NSDictionary? = jsonResult![0] as? NSDictionary
-                            //let currencies
+                            let currencies : NSArray = (values!.value(forKey: "currencies") as? NSArray)!
                             
+                            if currencies[0] != nil {
+                                print("Currencies")
+                                print(currencies[0])
+                            }
+                            else{
+                                print("FEJL")
+                            }
                             //print(values)
                             self.delegate?.responseDataHandler(data: values!)
                             
@@ -76,47 +83,13 @@ class Countrydata{
                             print(capital)
                             
                             
-                            //let data : NSDictionary? = jsonResult!["alpha2Code"] as? NSDictionary
-                            //print(data)
-                            
-//let capital: String? = jsonResult["capital"] as? String
-                           /* if name != nil && capital != nil {
-                                self.delegate?.responseDataHandler(data: jsonResult as! NSDictionary)
-                                print("WWWWWWWWWWWW")
-                            } else {
-                                print("FEEEEEEJL")
-                                self.delegate?.responseError(message: "Fake data not found")
-                            }*/
+              
                         }
                         else{
                             print("FFFFFFF")
                         }
                         
-                        /*guard let data1 = jsonResult as? [NSDictionary] else {
-                              return
-                        }
-                        guard let current = data1 as? [NSDictionary] else {
-                              return
-                        }*/
-                        /*
-                        print("Raw data:\n\(data!)\n")
-                        let dataString = String(data: data!, encoding: String.Encoding.utf8)
-                        print("Human-readable data:\n\(dataString!)")
-                        
-                        // fullName: String = "First Last"
-                        let fullNameArr = dataString!.split(separator: ",")
-
-                        //var name: String = String(fullNameArr[0])
-                        let name = jsonResult?.value(forKey: "name")
-                        var capital: String = String(fullNameArr[5])
-                        var population: String = String(fullNameArr[12])
-                        
-                        
-                        //print(firstName.replacingOccurrences(of: "'", with: ""))
-                         
-                         */
-                        
-                        //print(population)
+                       
                     
                     } catch {
                     }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE2CB9A923982E560059CA71 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2CB9A823982E560059CA71 /* File.swift */; };
 		FE497AA52383525000FDCFC3 /* Countrydata.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE497AA42383525000FDCFC3 /* Countrydata.swift */; };
 		FE77EEFB2379CF82005B9FA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE77EEFA2379CF82005B9FA6 /* AppDelegate.swift */; };
 		FE77EEFD2379CF82005B9FA6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE77EEFC2379CF82005B9FA6 /* SceneDelegate.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FE2CB9A823982E560059CA71 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		FE497AA42383525000FDCFC3 /* Countrydata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countrydata.swift; sourceTree = "<group>"; };
 		FE77EEF72379CF82005B9FA6 /* Travel_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travel_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE77EEFA2379CF82005B9FA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				FE77EEFA2379CF82005B9FA6 /* AppDelegate.swift */,
 				FE77EEFC2379CF82005B9FA6 /* SceneDelegate.swift */,
 				FE77EEFE2379CF82005B9FA6 /* ViewController.swift */,
+				FE2CB9A823982E560059CA71 /* File.swift */,
 				FEF5B46A238CE33B00D59056 /* DisplayViewContoller.swift */,
 				FE77EF002379CF82005B9FA6 /* Main.storyboard */,
 				FE497AA42383525000FDCFC3 /* Countrydata.swift */,
@@ -207,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE77EEFF2379CF82005B9FA6 /* ViewController.swift in Sources */,
+				FE2CB9A923982E560059CA71 /* File.swift in Sources */,
 				FE77EEFB2379CF82005B9FA6 /* AppDelegate.swift in Sources */,
 				FE497AA52383525000FDCFC3 /* Countrydata.swift in Sources */,
 				FE77EEFD2379CF82005B9FA6 /* SceneDelegate.swift in Sources */,
