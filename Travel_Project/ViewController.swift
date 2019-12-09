@@ -138,6 +138,43 @@ class ViewController: UIViewController, CountryDataProtocol  {
     }
     
     */
+    
+    /*
+     
+     var adventurers: [NSManagedObject] = []
+     
+     //MARK: Navigation
+         //Navigating between the different views
+         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+             super.prepare(for: segue, sender: sender)
+             
+             switch(segue.identifier ?? "") {
+                 case "AddAdventurer":
+                     os_log("Adding a new adventurer", log: OSLog.default, type: .debug)
+                 
+                 case "Quest":
+                     guard let QuestViewController = segue.destination as? QuestViewController else {
+                         fatalError("Unexpected destination: \(segue.destination)")
+                     }
+                     
+                     guard let selectedCell = sender as? AdventurerTableViewCell else {
+                         fatalError("Unexpected sender: \(sender)")
+                     }
+                      
+                     guard let indexPath = adventurerTableView.indexPath(for: selectedCell) else {
+                         fatalError("The selected cell is not being displayed by the table.")
+                     }
+                     
+                     let selectedAdventurer = adventurers[indexPath.row]
+                     QuestViewController.adventurer = selectedAdventurer
+
+                 default:
+                     fatalError("Unexpected Segue Identifier; \(segue.identifier)")
+             }
+         }
+     }
+     
+     */
 
 }
 

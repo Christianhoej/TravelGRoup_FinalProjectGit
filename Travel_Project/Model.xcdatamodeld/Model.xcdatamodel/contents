@@ -3,8 +3,9 @@
     <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
         <attribute name="password" optional="YES" attributeType="String"/>
         <attribute name="username" optional="YES" attributeType="String"/>
+        <attribute name="wishlist" optional="YES" attributeType="Transformable"/>
     </entity>
     <elements>
-        <element name="User" positionX="-63" positionY="-18" width="128" height="73"/>
+        <element name="User" positionX="-63" positionY="-18" width="128" height="88"/>
     </elements>
 </model>
