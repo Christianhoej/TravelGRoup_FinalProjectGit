@@ -22,6 +22,7 @@ class ViewController: UIViewController, CountryDataProtocol  {
     
     
     var dataSession = Countrydata()
+   
     
     
     override func viewDidLoad() {
@@ -145,7 +146,7 @@ class ViewController: UIViewController, CountryDataProtocol  {
     
     /*
      
-     var adventurers: [NSManagedObject] = []
+     var listCountries: [NSManagedObject] = []
      
      //MARK: Navigation
          //Navigating between the different views
@@ -179,6 +180,7 @@ class ViewController: UIViewController, CountryDataProtocol  {
      }
      
      */
+    
 
 }
 
