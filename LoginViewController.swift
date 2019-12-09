@@ -17,7 +17,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signupUsernameTextfield: UITextField!
     @IBOutlet weak var signupPasswordTextfield: UITextField!
-    @IBOutlet weak var signupBtn: UIButton!
     @IBOutlet weak var loginBtn: UIButton!
     var users: [NSManagedObject] = []
     
@@ -32,20 +31,30 @@ class LoginViewController: UIViewController {
     @IBAction func loginPressed(_ sender: Any) {
         //if usernameTextField == users.
         
-        if (usernameTextField.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true) || (passwordTextField.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true) {
+        /*if (usernameTextField.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true) || (passwordTextField.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true) {
             //noUser()
-            let alert = UIAlertController(title: "No input", message: "Please enter a valid username and password", preferredStyle: .alert)
+            /*let alert = UIAlertController(title: "No input", message: "Please enter a valid username and password", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-            self.present(alert, animated: true)
+            self.present(alert, animated: true)*/
         }
-        else{
+        else{*/
             checkUser()
             print("USEROK")
             print(userOK)
             if (userOK == false){
-                let alert = UIAlertController(title: "No input", message: "Please enter a valid username and password", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                self.present(alert, animated: true)
+                /*let alert1 = UIAlertController(title: "No input", message: "Please enter a valid username and password", preferredStyle: .alert)
+                alert1.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                self.present(alert1, animated: true)*/
+                // the alert view
+                let alert = UIAlertController(title: "", message: "alert disappears after 5 seconds", preferredStyle: .alert)
+                self.present(alert, animated: true, completion: nil)
+
+                // change to desired number of seconds (in this case 5 seconds)
+                let when = DispatchTime.now() + 1
+                DispatchQueue.main.asyncAfter(deadline: when){
+                  // your code with delay
+                  alert.dismiss(animated: true, completion: nil)
+                }
                 
             }
             else{
@@ -54,51 +63,12 @@ class LoginViewController: UIViewController {
             //if (usernameTextField.text)
         }
         
-    }
+    //}
     
-    
-    @IBAction func signUpPressed(_ sender: Any) {
-        if (signupUsernameTextfield.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true) || (signupPasswordTextfield.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true) {
-                    //noUser()
-            print("SIGNUPFEJL")
-                }
-                else {
-            addUser(username: signupUsernameTextfield.text!, password: signupPasswordTextfield.text!)
-            /*let alert = UIAlertController(title: "User added!", message: "Please enter your username and password above", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-            self.present(alert, animated: true)*/
-            print("SIGNUPGODKENDT")
-                    //sender.pulsate()
-                    //let vc = DisplayViewContoller()
-                    //vc.countryName = countryName.text!
-                }
-        
-    }
-    
-    func addUser(username: String, password: String) {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-          return
-        }
-          
-        let managedContext = appDelegate.persistentContainer.viewContext
 
-        let entity = NSEntityDescription.entity(forEntityName: "User", in: managedContext)!
-        
-        let user = NSManagedObject(entity: entity, insertInto: managedContext)
-        
-        user.setValue(username, forKey: "username")
-        user.setValue(password, forKey: "password")
-        
-        do {
-            try managedContext.save()
-            users.append(user)
-        } catch {
-            let nserror = error as NSError
-            NSLog("Unable to save \(nserror), \(nserror.userInfo)")
-            abort()
-            print("NOT SAVED")
-        }
-    }
+ 
+    
+    
     
     func checkUser(){
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {

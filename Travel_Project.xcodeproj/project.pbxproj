@@ -18,6 +18,7 @@
 		FE77EF042379CF82005B9FA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE77EF032379CF82005B9FA6 /* Assets.xcassets */; };
 		FE77EF072379CF82005B9FA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE77EF052379CF82005B9FA6 /* LaunchScreen.storyboard */; };
 		FE77EF122379CF82005B9FA6 /* Travel_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE77EF112379CF82005B9FA6 /* Travel_ProjectTests.swift */; };
+		FEBAD942239EC7D90036A58A /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBAD941239EC7D90036A58A /* signUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		FE77EF0D2379CF82005B9FA6 /* Travel_ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Travel_ProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE77EF112379CF82005B9FA6 /* Travel_ProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel_ProjectTests.swift; sourceTree = "<group>"; };
 		FE77EF132379CF82005B9FA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEBAD941239EC7D90036A58A /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				FE77EEFE2379CF82005B9FA6 /* ViewController.swift */,
 				FE2CB9A823982E560059CA71 /* File.swift */,
 				FE77EF002379CF82005B9FA6 /* Main.storyboard */,
+				FEBAD941239EC7D90036A58A /* signUpViewController.swift */,
 				FE497AA42383525000FDCFC3 /* Countrydata.swift */,
 				FE77EF032379CF82005B9FA6 /* Assets.xcassets */,
 				FE77EF052379CF82005B9FA6 /* LaunchScreen.storyboard */,
@@ -214,6 +217,7 @@
 			files = (
 				FE2B4E87239869F4001FD1FB /* LoginViewController.swift in Sources */,
 				FE77EEFF2379CF82005B9FA6 /* ViewController.swift in Sources */,
+				FEBAD942239EC7D90036A58A /* signUpViewController.swift in Sources */,
 				FE2CB9A923982E560059CA71 /* File.swift in Sources */,
 				FE77EEFB2379CF82005B9FA6 /* AppDelegate.swift in Sources */,
 				FE2B4E85239868D2001FD1FB /* Model.xcdatamodeld in Sources */,
