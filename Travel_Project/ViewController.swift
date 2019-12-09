@@ -20,24 +20,53 @@ class ViewController: UIViewController, CountryDataProtocol  {
     @IBOutlet weak var currencyLabel: UILabel!
     @IBOutlet weak var regionLabel: UILabel!
     
+    @IBOutlet weak var tblView: UITableView!
+    @IBOutlet weak var BtnDrop: UIButton!
+    
     
     var dataSession = Countrydata()
+    
    
     
-    
+    var fruitList = ["Orange", "Banana", "Apple", "Blueberry", "Mango", "Cherry", "Grape", "Strawberry"]
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.dataSession.delegate = self
+        tblView.isHidden = true
         
-        //
-        
-        
+        // Do any additional setup after loading the view, typically from a nib.
     }
+
     
     //let countryData = Countrydata()
    
     //let datasession = Countrydata();
     
+    @IBAction func onClickDropButton(_ sender: Any) {
+       if tblView.isHidden {
+            animate(toogle: true, type: BtnDrop)
+        } else {
+            animate(toogle: false, type: BtnDrop)
+        }
+        
+        
+    }
+    
+    
+    func animate(toogle: Bool, type: UIButton) {
+        
+        if type == BtnDrop {
+        
+        if toogle {
+            UIView.animate(withDuration: 0.3) {
+                self.tblView.isHidden = false
+            }
+        } else {
+            UIView.animate(withDuration: 0.3) {
+                self.tblView.isHidden = true
+            }
+        }
+        }
+    }
     
     
     
@@ -143,44 +172,28 @@ class ViewController: UIViewController, CountryDataProtocol  {
     }
     
     */
-    
-    /*
-     
-     var listCountries: [NSManagedObject] = []
-     
-     //MARK: Navigation
-         //Navigating between the different views
-         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-             super.prepare(for: segue, sender: sender)
-             
-             switch(segue.identifier ?? "") {
-                 case "AddAdventurer":
-                     os_log("Adding a new adventurer", log: OSLog.default, type: .debug)
-                 
-                 case "Quest":
-                     guard let QuestViewController = segue.destination as? QuestViewController else {
-                         fatalError("Unexpected destination: \(segue.destination)")
-                     }
-                     
-                     guard let selectedCell = sender as? AdventurerTableViewCell else {
-                         fatalError("Unexpected sender: \(sender)")
-                     }
-                      
-                     guard let indexPath = adventurerTableView.indexPath(for: selectedCell) else {
-                         fatalError("The selected cell is not being displayed by the table.")
-                     }
-                     
-                     let selectedAdventurer = adventurers[indexPath.row]
-                     QuestViewController.adventurer = selectedAdventurer
 
-                 default:
-                     fatalError("Unexpected Segue Identifier; \(segue.identifier)")
-             }
-         }
-     }
-     
-     */
+    
+    
     
 
 }
 
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       return fruitList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = fruitList[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        BtnDrop.setTitle("\(fruitList[indexPath.row])", for: .normal)
+        animate(toogle: false, type: BtnDrop)
+    }
+    
+    
+}

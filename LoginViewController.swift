@@ -47,7 +47,7 @@ class LoginViewController: UIViewController {
                 self.present(alert1, animated: true)*/
                 // the alert view
                 let alert = UIAlertController(title: "", message: "alert disappears after 5 seconds", preferredStyle: .alert)
-                self.present(alert, animated: true, completion: nil)
+           //     self.present(alert, animated: true, completion: nil)
 
                 // change to desired number of seconds (in this case 5 seconds)
                 let when = DispatchTime.now() + 1
